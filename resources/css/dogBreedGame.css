@@ -2,6 +2,11 @@ body {
   background-color: #121212;
 }
 
+#container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
 .bg-custom {
   background-color: #f2f2f2;
 }
@@ -16,38 +21,18 @@ body {
   max-width: 70%;
 }
 
-.img-custom {
-/*  padding: 0.25rem;*/
-/*  background-color: #fff;*/
-/*  border: 1px solid #dee2e6;*/
-/*  border-radius: 0.25rem;*/
-/*  max-width: 100%;*/
-/*  object-fit: cover;*/
-/*  object-fit: scale-down;*/
-/*  height: 250px;*/
-/*  width: 100px;*/
-/*  background-attachment: fixed;*/
-/*  background-position: center;*/
-/*  background-size: cover;*/
-/*  background-repeat: no-repeat;*/
-    text-align: center;
-    vertical-align: middle;
-    display: table-cell;
+.img-thumbnail {
+  object-fit: cover;
+  height: 250px;
+  width: 100%;
 }
 
 .picture {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
   background-image: url(../img/1.jpg);
-}
-
-.square {
-  width: 30%;
-  background: purple;
-  padding-bottom: 30%;
-  float: left;
-  margin: 1.66%;
-}
-
-#container {
-  margin: 0 auto;
-  max-width: 810px;
 }

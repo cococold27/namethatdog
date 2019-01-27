@@ -1,12 +1,13 @@
 /* Grey color: #141414 */
 /* White color: #eee */
 * {
+  margin: 0;
+  padding: 0;
   font-size: 16px;
 }
 
 body {
   background-color: #141414;
-  color: #141414;
   font-family: "Lato", sans-serif;
 }
 
@@ -16,9 +17,12 @@ body {
 }
 
 .jumbotron {
+  color: #141414;
   background-color: #eee;
   text-align: center;
   margin: 1rem 0;
+  height: auto;
+  padding: 1rem;
 }
 
 .container-custom {
@@ -81,6 +85,11 @@ body {
 /* PICTURES              */
 /* --------------------- */
 .picture-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+
   height: 250px;
   width: 100%;
   
@@ -97,6 +106,7 @@ body {
   filter: brightness(0.85);
 }
 
+/* 
 .picture-1 {
   background-image: url(../img/dog1.jpg);
   background-size: cover;
@@ -149,4 +159,8 @@ body {
   background-position: center;
   box-sizing: border-box;
   width: 100%;
+} */
+
+footer {
+  color: white;
 }

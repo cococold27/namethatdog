@@ -1,21 +1,26 @@
 //alert("CONNEDTED!");
-let pictures = [
-  "url(img/dog1.jpg)",
+let dogImages = [
+  "url(\"resources/img/dog1.jpg\")",
+  "url(\"resources/img/dog2.jpg\")",
+  "url(\"resources/img/dog3.jpg\")",
+  "url(\"resources/img/dog4.jpg\")",
+  "url(\"resources/img/dog5.jpg\")",
+  "url(\"resources/img/dog6.jpg\")",
 ];
 
-let squares = document.querySelectorAll(".picture");
+let dogs = document.querySelectorAll(".picture-container");
+let answer = dogImages[2];
+let dogBreed = document.getElementById("dogBreed");
+dogBreed.textContent = answer;
 
-for (let i = 0; i < pictures.length; i++) {
-  squares[i].style.backgroundImage = pictures[i];
+for (let i = 0; i < dogImages.length; i++) {
+  // Add initial images
+  dogs[i].style.backgroundImage = dogImages[i];
+
+  dogs[i].addEventListener("click", function() {
+    // alert("clicked an image");
+    let clickedImage = this.style.backgroundImage;
+    console.log(clickedImage + " " + answer);
+    (clickedImage === answer) ? alert("Correct!") : alert("Wrong!");
+  });
 }
-
-squares[2].style.backgroundImage = "url(resources/img/dog1.jpg)";
-//squares[3].style.backgroundColor = "rgb(255, 0, 0)";
-//squares[4].style.backgroundImage = "url(img/hero.jpg)";
-
-
-
-/* NOT WORKING!!! */
-//var img = document.createElement('img');
-//img.src = 'resources/img/dog2.jpg';
-//document.getElementById('picture-container').appendChild(img);

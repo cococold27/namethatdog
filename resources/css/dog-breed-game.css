@@ -29,6 +29,13 @@ body {
   max-width: 70%;
 }
 
+/* --------------------- */
+/* REUSABLE CODES        */
+/* --------------------- */
+.hide {
+  /* visibility: hidden; */
+}
+
 /*
 .img-thumbnail {
   padding: 0.25rem;
@@ -161,6 +168,19 @@ body {
   width: 100%;
 } */
 
-footer {
-  color: white;
+/* --------------------- */
+/* OTHERS                */
+/* --------------------- */
+.message {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+#message {
+  color: #eee;
+}
+
+#dog-breed {
+  font-size: 2.5rem;
+  font-weight: 700;
 }

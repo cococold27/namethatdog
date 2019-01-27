@@ -1,5 +1,13 @@
+/* Grey color: #141414 */
+/* White color: #eee */
+* {
+  font-size: 16px;
+}
+
 body {
-  background-color: #121212;
+  background-color: #141414;
+  color: #141414;
+  font-family: "Lato", sans-serif;
 }
 
 #container {
@@ -7,12 +15,8 @@ body {
   max-width: 900px;
 }
 
-.bg-custom {
-  background-color: #f2f2f2;
-}
-
 .jumbotron {
-  background-color: #f2f2f2;
+  background-color: #eee;
   text-align: center;
   margin: 1rem 0;
 }
@@ -21,18 +25,129 @@ body {
   max-width: 70%;
 }
 
+/*
 .img-thumbnail {
-  object-fit: cover;
-  height: 250px;
-  width: 100%;
-}
-
-.picture {
   padding: 0.25rem;
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: 0.25rem;
   max-width: 100%;
   height: auto;
-  background-image: url(../img/1.jpg);
 }
+*/
+
+/* --------------------- */
+/* NAVBAR                */
+/* --------------------- */
+.bg-custom {
+  background-color: #eee;
+  height: 4rem;
+}
+
+#top-scores {
+  border-radius: 5px;
+  height: auto;
+  transition: background-color 0.2s;
+}
+
+#top-scores:hover {
+  background-color: #f8f8f8;
+}
+
+#level {
+/*  margin-right: 1.5rem;*/
+  background-color: #d1e2d3;
+  border-radius: 5px;
+}
+
+.navbar-text {
+  color: #141414 !important;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  font-size: 1.4rem;
+  margin-right: 1.5rem;
+}
+
+.dog-logo {
+  margin-left: 1.5rem;
+  transition: transform 0.05s;
+}
+
+.dog-logo:hover {
+  transform: scale(1.05);
+}
+
+/* --------------------- */
+/* PICTURES              */
+/* --------------------- */
+.picture-container {
+  height: 250px;
+  width: 100%;
+  
+  border: 5px solid #dee2e6;
+  border-radius: 0.25rem;
+  
+  transition: all 0.2s;
+/*  z-index: 1;*/
+}
+
+.picture-container:hover {
+  transform: scale(1.05);
+  /*opacity: 0.95;*/
+  filter: brightness(0.85);
+}
+
+.picture-1 {
+  background-image: url(../img/dog1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.picture-2 {
+  background-image: url(../img/dog2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.picture-3 {
+  background-image: url(../img/dog3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.picture-4 {
+  background-image: url(../img/dog4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.picture-5 {
+  background-image: url(../img/dog5.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.picture-6 {
+  background-image: url(../img/dog6.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+

@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>    
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <title>Name The Dog Breed</title>
+  
+  <!--  Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
+  
   <!-- Bootstrap -->
-<!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">-->
   <link rel="stylesheet" type="text/css" href="lib/bootstrap-4.2.1-dist/css/bootstrap.css">
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">-->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="resources/css/dogBreedGame.css">
   <link rel="shortcut icon" type="image/png" href="./resources/img/dog-logo.png">
   
-  <title>Name The Dog Breed</title>
 </head>
 <body>
   <nav class="navbar navbar-expand-sm navbar-light bg-custom mb-4">
     <a class="navbar-brand" href="./index.html">
-      <img src="./resources/img/dog-logo.png" width="85" height="85" alt="Website Logo">
-<!--      <i class="fas fa-dog fa-4x"></i>-->
+      <img src="./resources/img/dog-logo.png" width="60" height="60" alt="Website Logo" class="dog-logo">
+      <!--<i class="fas fa-dog fa-4x"></i>-->
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-<!--
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link mx-auto" href="#">Left</a>
-        </li>
-      </ul>
--->
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link mr-5" href="#">Top Scores</a>
+          <a class="nav-link navbar-text" id="top-scores" href="#"><i class="fas fa-trophy"></i> Top Scores</a>
         </li>
         <li class="nav-item active">
-          <div class="nav-link mr-5">Best Score: 0</div>
+          <div class="navbar-text"><i class="fas fa-star"></i> Best Score: 0</div>
         </li>
         <li class="nav-item active">
-          <div class="nav-link mr-5">Current Score: 0</div>
+          <div class="navbar-text">Current Score: 0</div>
         </li>
         <li class="nav-item active">
-          <div class="nav-link mr-5">Level 1</div>
+          <div class="navbar-text" id="level">Level 1</div>
         </li>        
       </ul>
     </div>
@@ -57,22 +58,22 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-6">
-        <img src="resources/img/dog1.jpg" class="img-thumbnail mt-3 mb-3" id="picture-container">
+        <div class="img-thumbnail mt-3 mb-3 picture-container picture-1" id=""></div>
       </div>
       <div class="col-lg-4 col-6">
-        <img src="resources/img/dog2.jpg" class="img-thumbnail mt-3 mb-3" id="picture-container">
+        <div class="img-thumbnail mt-3 mb-3 picture-container picture-2" id=""></div>
       </div>
       <div class="col-lg-4 col-6">
-        <img src="resources/img/dog3.jpg" class="img-thumbnail mt-3 mb-3" id="picture-container">
+        <div class="img-thumbnail mt-3 mb-3 picture-container picture-3" id=""></div>
       </div>
       <div class="col-lg-4 col-6">
-        <img src="resources/img/dog4.jpg" class="img-thumbnail mt-3 mb-3" id="picture-container">
+        <div class="img-thumbnail mt-3 mb-3 picture-container picture-4" id=""></div>
       </div>
       <div class="col-lg-4 col-6">
-        <img src="resources/img/dog5.jpg" class="img-thumbnail mt-3 mb-3" id="picture-container">
+        <div class="img-thumbnail mt-3 mb-3 picture-container picture-5" id=""></div>
       </div>
       <div class="col-lg-4 col-6">
-        <img src="resources/img/dog6.jpg" class="img-thumbnail mt-3 mb-3" id="picture-container">
+        <div class="img-thumbnail mt-3 mb-3 picture-container picture-6" id=""></div>
       </div>
     </div>
   </div>

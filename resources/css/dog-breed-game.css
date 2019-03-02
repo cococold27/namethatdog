@@ -65,10 +65,15 @@ body {
   background-color: #f8f8f8;
 }
 
-#level {
+.level {
 /*  margin-right: 1.5rem;*/
   background-color: #d1e2d3;
   border-radius: 5px;
+}
+
+#current-level,
+#current-lives {
+  font-size: 1.4rem;
 }
 
 .navbar-text {

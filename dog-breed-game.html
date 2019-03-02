@@ -39,18 +39,27 @@
           <div class="navbar-text">Current Score: 0</div>
         </li>
         <li class="nav-item active">
-          <div class="navbar-text" id="level">Level 1</div>
-        </li>        
+          <div class="navbar-text" id="lives">Lives: <span id="current-lives"></span></div>
+        </li>
+        <li class="nav-item active">
+          <div class="navbar-text level">Level <span id="current-level"></span></div>
+        </li>   
       </ul>
     </div>
   </nav>
   <div class="container">
     <div class="jumbotron">
-<!--      <div class="row">-->
-      <h2>Choose the correct dog breed:</h2>
-<!--      </div>-->
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Choose the correct dog breed:</h2>
+        </div>
+      </div>
       <hr class="my-4">
-      <span id="dog-breed">Beagle</span>
+      <div class="row">
+        <div class="col-lg-12">
+          <span id="dog-breed"></span>
+        </div>
+      </div>
     </div>
   </div>
   <div class="container">
@@ -76,7 +85,7 @@
     </div>
   </div>
   <div class="message">
-    <button type="button" class="btn btn-success hide"><span id="message"></span></button>
+    <button style="display: none" type="button" class="btn btn-success hide"><span id="message"></span></button>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

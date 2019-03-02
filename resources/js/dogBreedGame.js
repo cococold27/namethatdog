@@ -1,11 +1,11 @@
 //alert("CONNEDTED!");
 let dogImages = [
-  "url(\"resources/img/dogs/dog1.jpg\")",
-  "url(\"resources/img/dogs/dog2.jpg\")",
-  "url(\"resources/img/dogs/dog3.jpg\")",
-  "url(\"resources/img/dogs/dog4.jpg\")",
-  "url(\"resources/img/dogs/dog5.jpg\")",
-  "url(\"resources/img/dogs/affenpinscher.jpg\")",
+  'url("resources/img/dogs/dog1.jpg")',
+  'url("resources/img/dogs/dog2.jpg")',
+  'url("resources/img/dogs/dog3.jpg")',
+  'url("resources/img/dogs/dog4.jpg")',
+  'url("resources/img/dogs/dog5.jpg")',
+  'url("resources/img/dogs/affenpinscher.jpg")',
 ];
 
 let dogs = document.querySelectorAll(".picture-container");
@@ -30,6 +30,10 @@ for (let i = 0; i < dogImages.length; i++) {
     // alert("clicked an image");
     let clickedImage = this.style.backgroundImage;
     console.log(clickedImage + " " + answer);
+
+
+    const displayMessage = document.getElementById("message");
+    displayMessage.parentElement.style.display = "inline";
     if (clickedImage === answer) {
       messageDisplay.textContent = "Correct";
     } else { 
@@ -37,3 +41,31 @@ for (let i = 0; i < dogImages.length; i++) {
     } 
   });
 }
+
+
+// ====================
+// GETELEMENTBYID
+// ====================
+// console.log(document.getElementById("header-title"));
+// let headerTitle = document.getElementById("header-title");
+// let header = document.getElementById("main-header");
+// console.log(headerTitle);
+
+// headerTitle.textContent = "Hello";
+// headerTitle.innerText = "Goodbye";
+
+// console.log(headerTitle.textContent);
+// console.log(headerTitle.innerText);
+
+// headerTitle.innerHTML = "<h3>Hello</h3>";
+// headerTitle.style.borderBottom = "solid 3px #000";
+
+const displayCurrentLevel = document.getElementById("current-level");
+console.log(displayCurrentLevel);
+let currentLevel = 1;
+currentLevel++;
+displayCurrentLevel.textContent = currentLevel;
+
+const displayCurrentLives = document.getElementById("current-lives");
+let currentLives = 3;
+displayCurrentLives.textContent = currentLives;

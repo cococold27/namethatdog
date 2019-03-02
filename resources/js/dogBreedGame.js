@@ -43,41 +43,40 @@ function allDogBreeds() {
   return dogImages;
 }
 
-function getRandomDog() {
+function getDogName(randomDog) {
+  let dogName = "";
 
+  const startIndex = "/dogs/";
+  const endIndex = ".";
+
+  const start = randomDog.indexOf(startIndex) + startIndex.length;
+  const end = randomDog.indexOf(endIndex);
+
+  const dogDisplay = randomDog.slice(start, end);
+  const dogDisplayArr = dogDisplay.split("-");
+
+  for (let i = 0; i < dogDisplayArr.length; i++) {
+    dogName += dogDisplayArr[i].charAt(0).toUpperCase() + dogDisplayArr[i].slice(1) + " ";
+  }
+
+  return dogName;
+}
+
+function generatePictures() {
+  
 }
 
 function dogBreedGame() {
   const NUM_OF_PICTURES = 6;
 
   const dogImages = allDogBreeds();
+  const randomDog = dogImages[Math.floor(Math.random() * dogImages.length)];
+  const dogName = getDogName(randomDog);
 
+  document.getElementById("dog-breed").textContent = dogName;
 
   const dogs = document.querySelectorAll(".picture-container");
-  const randomDog = dogImages[Math.floor(Math.random() * dogImages.length)];
-  const dogBreed = document.getElementById("dog-breed");
-
-  const startIndex = "/dogs/";
-  const endIndex = ".";
-  const dogDisplay = randomDog.slice(randomDog.indexOf(startIndex) + startIndex.length, randomDog.indexOf(endIndex));
-
-  const dogDisplayArr = dogDisplay.split("-");
-  // console.log(dogDisplayArr);
-
-  let dogName = "";
-
-  for (let i = 0; i < dogDisplayArr.length; i++) {
-    dogName += dogDisplayArr[i].charAt(0).toUpperCase() + dogDisplayArr[i].slice(1) + " ";
-  }
-
-  // console.log(dogName);
-
-
   const messageDisplay = document.querySelector("#message");
-  dogBreed.textContent = dogName;
-
-
-
 
 
   let currentLevel = 1;
@@ -117,9 +116,7 @@ function dogBreedGame() {
     }
   }
 
-
   const RANDOM_DOG_INDEX = Math.floor(Math.random() * NUM_OF_PICTURES);
-
   let temp = dogs[RANDOM_DOG_INDEX].style.backgroundImage;
   dogs[RANDOM_DOG_INDEX].style.backgroundImage = randomDog;
   dogs[0].style.backgroundImage = temp;

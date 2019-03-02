@@ -197,4 +197,10 @@ body {
   .container-mobile {
     width: 90%;
   }
+
+  .picture-container,
+  .jumbotron {
+    margin: auto;
+    max-width: 350px;
+  }
 }

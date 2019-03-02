@@ -1,6 +1,4 @@
-function dogBreedGame() {
-  const NUM_OF_PICTURES = 6;
-
+function allDogBreeds() {
   const DOG_IMAGES_LOCATION = "resources/img/dogs/";
 
   const dogImages = [
@@ -11,20 +9,48 @@ function dogBreedGame() {
     'url("' + DOG_IMAGES_LOCATION + 'alaskan-malamute.jpg")',
     'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
     'url("' + DOG_IMAGES_LOCATION + 'american-english-coonhound.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + 'redbone-coonhound.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'american-eskimo.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'american-foxhound.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'american-pit-bull-terrier.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'appenzeller-sennenhund.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'australian-cattle-dog.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'australian-kelpie.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'australian-terrier.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'azawakh.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'barbet.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'basenji.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'beagle.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'bearded-collie.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'bedlington-terrier.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'berger-picard.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'bichon-frise.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'black-and-tan-coonhound.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+
+
+
+
+
+
+    'url("' + DOG_IMAGES_LOCATION + 'redbone-coonhound.jpg")',
   ];
 
-  // console.log(dogImages);
+  return dogImages;
+}
 
+function getRandomDog() {
+
+}
+
+function dogBreedGame() {
+  const NUM_OF_PICTURES = 6;
+
+  const dogImages = allDogBreeds();
 
 
   const dogs = document.querySelectorAll(".picture-container");
@@ -48,7 +74,6 @@ function dogBreedGame() {
 
 
   const messageDisplay = document.querySelector("#message");
-
   dogBreed.textContent = dogName;
 
 

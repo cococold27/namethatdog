@@ -62,30 +62,11 @@ function getDogName(randomDog) {
   return dogName;
 }
 
-function generatePictures() {
-  
-}
-
-function dogBreedGame() {
-  const NUM_OF_PICTURES = 6;
-
+function generatePictures(NUM_OF_PICTURES) {
+  const dogs = document.querySelectorAll(".picture-container");
   const dogImages = allDogBreeds();
   const randomDog = dogImages[Math.floor(Math.random() * dogImages.length)];
-  const dogName = getDogName(randomDog);
-
-  document.getElementById("dog-breed").textContent = dogName;
-
-  const dogs = document.querySelectorAll(".picture-container");
-  const messageDisplay = document.querySelector("#message");
-
-
-  let currentLevel = 1;
-  let currentLives = 3;
-  let currentScore = 0;
-  let bestScore = 0;
- 
-
-
+  document.getElementById("dog-breed").textContent = getDogName(randomDog);
 
   let uniqueDogImages = [];
 
@@ -121,6 +102,34 @@ function dogBreedGame() {
   dogs[RANDOM_DOG_INDEX].style.backgroundImage = randomDog;
   dogs[0].style.backgroundImage = temp;
 
+  return randomDog;
+}
+
+function dogBreedGame() {
+  const NUM_OF_PICTURES = 6;
+
+  // const dogImages = allDogBreeds();
+  // let randomDog = dogImages[Math.floor(Math.random() * dogImages.length)];
+  // document.getElementById("dog-breed").textContent = getDogName(randomDog);
+
+  const dogs = document.querySelectorAll(".picture-container");
+  const messageDisplay = document.querySelector("#message");
+
+  let randomDog = generatePictures(NUM_OF_PICTURES);
+
+
+
+
+
+  let currentLevel = 1;
+  let currentLives = 3;
+  let currentScore = 0;
+  let bestScore = 0;
+ 
+  document.getElementById("current-lives").textContent = currentLives;
+  document.getElementById("current-score").textContent = currentScore;
+  document.getElementById("best-score").textContent = bestScore;
+
 
   for (let i = 0; i < NUM_OF_PICTURES; i++) {
     // console.log(uniqueDogImages);
@@ -146,43 +155,32 @@ function dogBreedGame() {
           document.getElementById("best-score").textContent = bestScore;
         }
 
+        randomDog = generatePictures(NUM_OF_PICTURES, randomDog);
       } else { 
         messageDisplay.textContent = "Try again";
 
         currentLives--;
+
+        if (currentLives <= 0) {
+          randomDog = generatePictures(NUM_OF_PICTURES, randomDog);
+          currentLevel = 1;
+          currentScore = 0;
+          currentLives = 3;
+
+          document.getElementById("current-level").textContent = currentLevel;
+          document.getElementById("current-score").textContent = currentScore;
+        }
+
         document.getElementById("current-lives").textContent = currentLives;
+
       } 
     });
   }
 
 
-  // ====================
-  // GETELEMENTBYID
-  // ====================
-  // console.log(document.getElementById("header-title"));
-  // let headerTitle = document.getElementById("header-title");
-  // let header = document.getElementById("main-header");
-  // console.log(headerTitle);
-
-  // headerTitle.textContent = "Hello";
-  // headerTitle.innerText = "Goodbye";
-
-  // console.log(headerTitle.textContent);
-  // console.log(headerTitle.innerText);
-
-  // headerTitle.innerHTML = "<h3>Hello</h3>";
-  // headerTitle.style.borderBottom = "solid 3px #000";
 
 
-  const displayCurrentLives = document.getElementById("current-lives");
-
-  displayCurrentLives.textContent = currentLives;
-
-  const displayCurrentScore = document.getElementById("current-score");
-  displayCurrentScore.textContent = currentScore;
-
-  const displayBestScore = document.getElementById("best-score");
-  displayBestScore.textContent = bestScore;
+  return 1;
 }
 
 dogBreedGame();

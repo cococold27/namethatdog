@@ -71,19 +71,18 @@ function generatePictures(NUM_OF_PICTURES) {
   let uniqueDogImages = [];
 
   uniqueDogImages[0] = randomDog;
+  dogs[0].style.visibility = "visible";
+  dogs[0].style.opacity = "1";
+  dogs[0].style.transition = "visibility 1s, opacity 1s";
   dogs[0].style.backgroundImage = randomDog;
 
   for (let i = 1; i < NUM_OF_PICTURES; i++) {
     const RANDOM_NUMBER = Math.floor(Math.random() * dogImages.length);
-    // console.log(RANDOM_NUMBER, dogImages.length);
-
-    // Add images
-    // dogs[i].style.backgroundImage = dogImages[i];
-
+    
+    // Add unique images
     let isUnique = true;
 
     for (let j = 0; j < uniqueDogImages.length; j++) {
-      // console.log(dogImages[RANDOM_NUMBER], uniqueDogImages[j]);
       if (dogImages[RANDOM_NUMBER] === uniqueDogImages[j]) {
         isUnique = false;
       }
@@ -91,6 +90,10 @@ function generatePictures(NUM_OF_PICTURES) {
 
     if (isUnique) {
       uniqueDogImages.push(dogImages[RANDOM_NUMBER]);
+
+      dogs[i].style.visibility = "visible";
+      dogs[i].style.opacity = "1";
+      dogs[i].style.transition = "visibility 1s, opacity 1s";
       dogs[i].style.backgroundImage = dogImages[RANDOM_NUMBER];
     } else {
       i--;
@@ -107,10 +110,6 @@ function generatePictures(NUM_OF_PICTURES) {
 
 function dogBreedGame() {
   const NUM_OF_PICTURES = 6;
-
-  // const dogImages = allDogBreeds();
-  // let randomDog = dogImages[Math.floor(Math.random() * dogImages.length)];
-  // document.getElementById("dog-breed").textContent = getDogName(randomDog);
 
   const dogs = document.querySelectorAll(".picture-container");
   const messageDisplay = document.querySelector("#message");
@@ -134,16 +133,21 @@ function dogBreedGame() {
   for (let i = 0; i < NUM_OF_PICTURES; i++) {
     // console.log(uniqueDogImages);
 
+    let firstClick = true;
+
     dogs[i].addEventListener("click", function() {
       // alert("clicked an image");
       let clickedImage = this.style.backgroundImage;
       console.log(clickedImage + " " + randomDog);
+      console.log(firstClick);
 
       const displayMessage = document.getElementById("message");
       displayMessage.parentElement.style.display = "inline";
-      if (clickedImage === randomDog) {
-        messageDisplay.textContent = "Correct";
+      if (clickedImage === randomDog && firstClick) {
+        firstClick = false;
 
+        messageDisplay.textContent = "Correct!";
+        
         currentLevel++;
         document.getElementById("current-level").textContent = currentLevel;
 
@@ -155,32 +159,57 @@ function dogBreedGame() {
           document.getElementById("best-score").textContent = bestScore;
         }
 
-        randomDog = generatePictures(NUM_OF_PICTURES, randomDog);
-      } else { 
-        messageDisplay.textContent = "Try again";
+        for (let j = 0; j < dogs.length; j++) {
+          dogs[j].style.visibility = "hidden";
+          dogs[j].style.opacity = "0";
+          dogs[j].style.transition = "visibility 0.7s, opacity 0.7s";
+          dogs[j].style.transitionDelay = "0.2s";
+        }
+
+        setTimeout(function() { 
+          firstClick = true;
+          randomDog = generatePictures(NUM_OF_PICTURES, randomDog);
+        }, 1000);
+      } else if (firstClick) {
+        firstClick = false;
 
         currentLives--;
 
+        messageDisplay.textContent = "Try again";
+        this.style.visibility = "hidden";
+        this.style.opacity = "0";
+        this.style.transition = "visibility 0.7s, opacity 0.7s";
+        this.style.transitionDelay = "0.2s";
+
+        setTimeout(function() {
+          firstClick = true;
+        }, 1000);
+
         if (currentLives <= 0) {
-          randomDog = generatePictures(NUM_OF_PICTURES, randomDog);
+          for (let j = 0; j < dogs.length; j++) {
+            dogs[j].style.visibility = "hidden";
+            dogs[j].style.opacity = "0";
+            dogs[j].style.transition = "visibility 0.7s, opacity 0.7s";
+            dogs[j].style.transitionDelay = "0.2s";
+          }
+          
+          setTimeout(function() {
+            firstClick = true;
+            randomDog = generatePictures(NUM_OF_PICTURES, randomDog);
+          }, 1000);
+
           currentLevel = 1;
           currentScore = 0;
           currentLives = 3;
 
           document.getElementById("current-level").textContent = currentLevel;
           document.getElementById("current-score").textContent = currentScore;
+          displayMessage.parentElement.style.display = "none";
         }
-
         document.getElementById("current-lives").textContent = currentLives;
-
       } 
     });
   }
-
-
-
-
-  return 1;
 }
 
 dogBreedGame();

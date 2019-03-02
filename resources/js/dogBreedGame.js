@@ -1,38 +1,55 @@
 function dogBreedGame() {
-  const numOfPictures = 6;
+  const NUM_OF_PICTURES = 6;
 
-  const dogImagesLocation = "resources/img/dogs/";
+  const DOG_IMAGES_LOCATION = "resources/img/dogs/";
 
   const dogImages = [
-    'url("' + dogImagesLocation + 'dog1.jpg")',
-    'url("' + dogImagesLocation + 'dog2.jpg")',
-    'url("' + dogImagesLocation + 'dog3.jpg")',
-    'url("' + dogImagesLocation + 'dog4.jpg")',
-    'url("' + dogImagesLocation + 'dog5.jpg")',
-    'url("' + dogImagesLocation + 'affenpinscher.jpg")',
-    'url("' + dogImagesLocation + 'afghan-hound.jpg")',
-    'url("' + dogImagesLocation + 'airedale-terrier.jpg")',
-    'url("' + dogImagesLocation + 'akita-inu.jpg")',
-    'url("' + dogImagesLocation + 'alaskan-malamute.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'affenpinscher.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'afghan-hound.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'airedale-terrier.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'akita-inu.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'alaskan-malamute.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'american-english-coonhound.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + 'american-bulldog.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + 'redbone-coonhound.jpg")',
   ];
 
-  console.log(dogImages);
+  // console.log(dogImages);
 
 
 
-  let dogs = document.querySelectorAll(".picture-container");
-  let answer = dogImages[5];
-  let dogBreed = document.getElementById("dog-breed");
+  const dogs = document.querySelectorAll(".picture-container");
+  const randomDog = dogImages[Math.floor(Math.random() * dogImages.length)];
+  const dogBreed = document.getElementById("dog-breed");
 
   const startIndex = "/dogs/";
   const endIndex = ".";
-  let dogDisplay = answer.slice(answer.indexOf(startIndex) + startIndex.length, answer.indexOf(endIndex));
-  let capitalize = dogDisplay.charAt(0).toUpperCase() + dogDisplay.substr(1);
+  const dogDisplay = randomDog.slice(randomDog.indexOf(startIndex) + startIndex.length, randomDog.indexOf(endIndex));
 
-  console.log(dogDisplay);
-  let messageDisplay = document.querySelector("#message");
+  const dogDisplayArr = dogDisplay.split("-");
+  // console.log(dogDisplayArr);
 
-  dogBreed.textContent = capitalize;
+  let dogName = "";
+
+  for (let i = 0; i < dogDisplayArr.length; i++) {
+    dogName += dogDisplayArr[i].charAt(0).toUpperCase() + dogDisplayArr[i].slice(1) + " ";
+  }
+
+  // console.log(dogName);
+
+
+  const messageDisplay = document.querySelector("#message");
+
+  dogBreed.textContent = dogName;
 
 
 
@@ -42,23 +59,58 @@ function dogBreedGame() {
   let currentLives = 3;
   let currentScore = 0;
   let bestScore = 0;
+ 
 
-  for (let i = 0; i < numOfPictures; i++) {
-    let randomNumber = Math.floor(Math.random() * dogImages.length);
-    console.log(randomNumber, dogImages.length);
+
+
+  let uniqueDogImages = [];
+
+  uniqueDogImages[0] = randomDog;
+  dogs[0].style.backgroundImage = randomDog;
+
+  for (let i = 1; i < NUM_OF_PICTURES; i++) {
+    const RANDOM_NUMBER = Math.floor(Math.random() * dogImages.length);
+    // console.log(RANDOM_NUMBER, dogImages.length);
 
     // Add images
     // dogs[i].style.backgroundImage = dogImages[i];
-    dogs[i].style.backgroundImage = dogImages[randomNumber];
+
+    let isUnique = true;
+
+    for (let j = 0; j < uniqueDogImages.length; j++) {
+      // console.log(dogImages[RANDOM_NUMBER], uniqueDogImages[j]);
+      if (dogImages[RANDOM_NUMBER] === uniqueDogImages[j]) {
+        isUnique = false;
+      }
+    }
+
+    if (isUnique) {
+      uniqueDogImages.push(dogImages[RANDOM_NUMBER]);
+      dogs[i].style.backgroundImage = dogImages[RANDOM_NUMBER];
+    } else {
+      i--;
+    }
+  }
+
+
+  const RANDOM_DOG_INDEX = Math.floor(Math.random() * NUM_OF_PICTURES);
+
+  let temp = dogs[RANDOM_DOG_INDEX].style.backgroundImage;
+  dogs[RANDOM_DOG_INDEX].style.backgroundImage = randomDog;
+  dogs[0].style.backgroundImage = temp;
+
+
+  for (let i = 0; i < NUM_OF_PICTURES; i++) {
+    // console.log(uniqueDogImages);
 
     dogs[i].addEventListener("click", function() {
       // alert("clicked an image");
       let clickedImage = this.style.backgroundImage;
-      console.log(clickedImage + " " + answer);
+      console.log(clickedImage + " " + randomDog);
 
       const displayMessage = document.getElementById("message");
       displayMessage.parentElement.style.display = "inline";
-      if (clickedImage === answer) {
+      if (clickedImage === randomDog) {
         messageDisplay.textContent = "Correct";
 
         currentLevel++;

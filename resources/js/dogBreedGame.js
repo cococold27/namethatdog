@@ -194,11 +194,11 @@ function dogBreedGame() {
     // console.log(uniqueDogImages);
     let firstClick = true;
 
-    $(dogs[i]).on("click touch", function (e) {
+    $(dogs[i]).on("click touchend", function (e) {
     // dogs[i].addEventListener("click", function(e) {
       // alert("clicked an image");
       // console.log(e);
-      if (e.type === "touch") {
+      if (e.type === "touchend") {
         e.preventDefault();
       }
 

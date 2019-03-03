@@ -205,13 +205,16 @@ function dogBreedGame() {
       console.log(getDogName(clickedImage));
       console.log(getDogName(randomDog));
 
+      let clickedImageName = getDogName(clickedImage);
+      let randomDogName = getDogName(randomDog);
+
       if (getDogName(clickedImage) === getDogName(randomDog.slice(0, randomDog.length-1))) {
         console.log("here");
       }
       // console.log(firstClick);
 
       // if ((clickedImage === randomDog) && firstClick) {
-        if (firstClick) {
+        if (firstClick && (clickedImageName === randomDogName)) {
         firstClick = false;
 
         document.getElementById("jumbotron-message").style.display = "block";

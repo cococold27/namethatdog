@@ -175,6 +175,7 @@ function generateDogs(NUM_OF_PICTURES) {
 
 function dogBreedGame() {
   const NUM_OF_PICTURES = 6;
+  const WEBSITE_LINK = "https://cococold27.github.io/namethatdog/";
 
   const dogs = document.querySelectorAll(".picture-container");
   const messageDisplay = document.querySelector("#message");
@@ -197,13 +198,11 @@ function dogBreedGame() {
 
       let clickedImage = (this.style.backgroundImage);
 
-      const WEBSITE_LINK = "https://cococold27.github.io/namethatdog/";
-
       if (clickedImage.indexOf(WEBSITE_LINK) !== -1) {
         clickedImage = clickedImage.replace(WEBSITE_LINK, "");
       }
 
-      console.log(clickedImage, randomDog);
+      // console.log(clickedImage, randomDog);
 
       if ((clickedImage === randomDog) && firstClick) {
         firstClick = false;
@@ -246,8 +245,8 @@ function dogBreedGame() {
         document.getElementById("jumbotron-message").style.backgroundColor = "#ffc107";
         document.getElementById("jumbotron-message").style.borderColor = "#ffc107";
         document.getElementById("message").style.color = "#141414";
-        // messageDisplay.innerHTML = "<h4>Try again<h4>";
-        messageDisplay.innerHTML = clickedImage + " " + randomDog;
+        messageDisplay.innerHTML = "<h4>Try again<h4>";
+        // messageDisplay.innerHTML = clickedImage + " " + randomDog;
 
         this.style.visibility = "hidden";
         this.style.opacity = "0";

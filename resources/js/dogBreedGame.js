@@ -49,18 +49,21 @@ function allDogBreeds() {
     'url("' + DOG_IMAGES_LOCATION + 'chow-chow.jpg")',
     'url("' + DOG_IMAGES_LOCATION + 'clumber-spaniel.jpg")',
     'url("' + DOG_IMAGES_LOCATION + 'collie.jpg")',
-    'url("' + DOG_IMAGES_LOCATION + 'curly-coated-retriever.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'curly_coated-retriever.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'dachshund.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'dalmatian.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'doberman-pinscher.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'dogo-argentino.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'dogue-de-bordeaux.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'dutch-shepherd.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'english-setter.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'english-springer-spaniel.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'entlebucher-mountain-dog.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'finnish-lapphund.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'finnish-spitz.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'flat_coated-retriever.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'fox-terrier.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'french-bulldog.jpg")',
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
@@ -101,7 +104,7 @@ function getDogName(randomDog) {
     dogName += dogDisplayArr[i].charAt(0).toUpperCase() + dogDisplayArr[i].slice(1) + " ";
   }
 
-  return dogName;
+  return dogName.replace("_", "-");
 }
 
 function generatePictures(NUM_OF_PICTURES) {
@@ -208,6 +211,7 @@ function dogBreedGame() {
           firstClick = true;
           randomDog = generatePictures(NUM_OF_PICTURES, randomDog);
         }, 1000);
+
       } else if (firstClick) {
         firstClick = false;
 
@@ -221,7 +225,7 @@ function dogBreedGame() {
 
         setTimeout(function() {
           firstClick = true;
-        }, 1000);
+        }, 1500);
 
         if (currentLives <= 0) {
           for (let j = 0; j < dogs.length; j++) {

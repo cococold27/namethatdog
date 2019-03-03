@@ -195,9 +195,15 @@ function dogBreedGame() {
 
     dogs[i].addEventListener("click", function() {
 
-      let clickedImage = this.style.backgroundImage;
+      let clickedImage = (this.style.backgroundImage);
 
-      // console.log(clickedImage, randomDog);
+      const WEBSITE_LINK = "https://cococold27.github.io/namethatdog/";
+
+      if (clickedImage.indexOf(WEBSITE_LINK) !== -1) {
+        clickedImage = clickedImage.replace(WEBSITE_LINK, "");
+      }
+
+      console.log(clickedImage, randomDog);
 
       if ((clickedImage === randomDog) && firstClick) {
         firstClick = false;

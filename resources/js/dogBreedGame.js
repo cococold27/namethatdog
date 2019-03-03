@@ -191,30 +191,19 @@ function dogBreedGame() {
   document.getElementById("best-score").textContent = bestScore;
 
   for (let i = 0; i < NUM_OF_PICTURES; i++) {
-    // console.log(uniqueDogImages);
     let firstClick = true;
 
-    dogs[i].addEventListener("click", function(e) {
-      // alert("clicked an image");
-      // console.log(e);
-      // console.log(e.type);
-
+    dogs[i].addEventListener("click", function() {
 
       let clickedImage = this.style.backgroundImage;
-      console.log(clickedImage + " " + randomDog);
-      console.log(getDogName(clickedImage));
-      console.log(getDogName(randomDog));
 
-      let clickedImageName = getDogName(clickedImage);
-      let randomDogName = getDogName(randomDog);
+      console.log(getDogName(clickedImage).replace(/ /gi, ""));
+      console.log(getDogName(randomDog).replace(/ /gi, ""));
 
-      if (getDogName(clickedImage) === getDogName(randomDog.slice(0, randomDog.length-1))) {
-        console.log("here");
-      }
-      // console.log(firstClick);
+      var clickedName = getDogName(clickedImage).replace(/ /gi, "");
+      var randomName = getDogName(randomDog).replace(/ /gi, "");
 
-      // if ((clickedImage === randomDog) && firstClick) {
-        if (firstClick && (clickedImageName === randomDogName)) {
+      if ((clickedName == randomName) && firstClick) {
         firstClick = false;
 
         document.getElementById("jumbotron-message").style.display = "block";

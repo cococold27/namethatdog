@@ -194,12 +194,13 @@ function dogBreedGame() {
     // console.log(uniqueDogImages);
     let firstClick = true;
 
-    $(dogs[i]).on("click touchstart", function () {
+    $(dogs[i]).on("click touch", function (e) {
     // dogs[i].addEventListener("click", function() {
       // alert("clicked an image");
       let clickedImage = this.style.backgroundImage;
       console.log(clickedImage + " " + randomDog);
       console.log(firstClick);
+      console.log(e.type);
 
       // const displayMessage = document.getElementById("message");
       // displayMessage.parentElement.style.display = "inline";

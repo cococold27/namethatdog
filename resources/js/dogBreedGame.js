@@ -192,10 +192,10 @@ function dogBreedGame() {
 
   for (let i = 0; i < NUM_OF_PICTURES; i++) {
     // console.log(uniqueDogImages);
-    let firstClick = true;
+    let firstClick = false;
 
     dogs[i].addEventListener("click", function(e) {
-      alert("clicked an image");
+      // alert("clicked an image");
       // console.log(e);
       // console.log(e.type);
 

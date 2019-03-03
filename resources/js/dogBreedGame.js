@@ -194,11 +194,9 @@ function dogBreedGame() {
     // console.log(uniqueDogImages);
     let firstClick = true;
 
-    // $(dogs[i]).on("click touchend", function (e) {
     dogs[i].addEventListener("click", function(e) {
-      // alert("clicked an image");
+      alert("clicked an image");
       // console.log(e);
-
       // console.log(e.type);
 
 
@@ -206,8 +204,6 @@ function dogBreedGame() {
       // console.log(clickedImage + " " + randomDog);
       // console.log(firstClick);
 
-      // const displayMessage = document.getElementById("message");
-      // displayMessage.parentElement.style.display = "inline";
       if (clickedImage === randomDog && firstClick) {
         firstClick = false;
 

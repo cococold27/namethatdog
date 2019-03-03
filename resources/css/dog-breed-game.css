@@ -189,6 +189,15 @@ body {
   font-weight: 700;
 }
 
+#modalCenter {
+  background-color: rgb(20, 20, 20, 0.8);
+}
+
+.modal-content {
+  background-color: #eee;
+}
+
+
 @media only screen and (max-width: 575px) {
   .dog-logo {
     width: 50px;

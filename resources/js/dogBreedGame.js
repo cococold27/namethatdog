@@ -200,7 +200,7 @@ function dogBreedGame() {
       let clickedImage = this.style.backgroundImage;
       console.log(clickedImage + " " + randomDog);
       console.log(firstClick);
-      console.log(e.type);
+      // console.log(e.type);
 
       // const displayMessage = document.getElementById("message");
       // displayMessage.parentElement.style.display = "inline";

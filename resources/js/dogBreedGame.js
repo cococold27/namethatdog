@@ -70,6 +70,25 @@ function allDogBreeds() {
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
     
     
     
@@ -171,12 +190,12 @@ function dogBreedGame() {
   document.getElementById("current-score").textContent = currentScore;
   document.getElementById("best-score").textContent = bestScore;
 
-
   for (let i = 0; i < NUM_OF_PICTURES; i++) {
     // console.log(uniqueDogImages);
     let firstClick = true;
 
-    dogs[i].addEventListener("click", function() {
+    $(dogs[i]).on("click touch", function () {
+    // dogs[i].addEventListener("click", function() {
       // alert("clicked an image");
       let clickedImage = this.style.backgroundImage;
       console.log(clickedImage + " " + randomDog);

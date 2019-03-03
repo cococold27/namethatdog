@@ -145,6 +145,7 @@ function generatePictures(NUM_OF_PICTURES) {
     }
   }
 
+  // Randomize the answer
   const RANDOM_DOG_INDEX = Math.floor(Math.random() * NUM_OF_PICTURES);
   let temp = dogs[RANDOM_DOG_INDEX].style.backgroundImage;
   dogs[RANDOM_DOG_INDEX].style.backgroundImage = randomDog;
@@ -228,6 +229,8 @@ function dogBreedGame() {
         }, 1500);
 
         if (currentLives <= 0) {
+          $("#modalCenter").modal('show');
+
           for (let j = 0; j < dogs.length; j++) {
             dogs[j].style.visibility = "hidden";
             dogs[j].style.opacity = "0";
@@ -252,6 +255,7 @@ function dogBreedGame() {
       } 
     });
   }
+
 }
 
 dogBreedGame();

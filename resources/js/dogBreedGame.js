@@ -195,12 +195,16 @@ function dogBreedGame() {
     let firstClick = true;
 
     // $(dogs[i]).on("click touch", function (e) {
-    dogs[i].addEventListener("click", function() {
+    dogs[i].addEventListener("click", function(e) {
       // alert("clicked an image");
+      // console.log(e);
+      e.preventDefault();
+      console.log(e.type);
+
+
       let clickedImage = this.style.backgroundImage;
       console.log(clickedImage + " " + randomDog);
       console.log(firstClick);
-      // console.log(e.type);
 
       // const displayMessage = document.getElementById("message");
       // displayMessage.parentElement.style.display = "inline";

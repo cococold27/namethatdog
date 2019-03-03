@@ -240,7 +240,8 @@ function dogBreedGame() {
         document.getElementById("jumbotron-message").style.backgroundColor = "#ffc107";
         document.getElementById("jumbotron-message").style.borderColor = "#ffc107";
         document.getElementById("message").style.color = "#141414";
-        messageDisplay.innerHTML = "<h4>Try again<h4>";
+        // messageDisplay.innerHTML = "<h4>Try again<h4>";
+        messageDisplay.innerHTML = clickedImage + " " + randomDog;
 
         this.style.visibility = "hidden";
         this.style.opacity = "0";

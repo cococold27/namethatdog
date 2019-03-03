@@ -194,20 +194,17 @@ function dogBreedGame() {
     // console.log(uniqueDogImages);
     let firstClick = true;
 
-    $(dogs[i]).on("click touchend", function (e) {
-    // dogs[i].addEventListener("click", function(e) {
+    // $(dogs[i]).on("click touchend", function (e) {
+    dogs[i].addEventListener("click", function(e) {
       // alert("clicked an image");
       // console.log(e);
-      if (e.type === "touchend") {
-        e.preventDefault();
-      }
 
-      console.log(e.type);
+      // console.log(e.type);
 
 
       let clickedImage = this.style.backgroundImage;
-      console.log(clickedImage + " " + randomDog);
-      console.log(firstClick);
+      // console.log(clickedImage + " " + randomDog);
+      // console.log(firstClick);
 
       // const displayMessage = document.getElementById("message");
       // displayMessage.parentElement.style.display = "inline";

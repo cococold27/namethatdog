@@ -175,13 +175,8 @@ body {
 /* --------------------- */
 /* OTHERS                */
 /* --------------------- */
-.message {
-  text-align: center;
-  margin: 1rem auto;
-}
-
-#message {
-  color: #eee;
+#jumbotron-message {
+  padding: 0.3rem;
 }
 
 #dog-breed {
@@ -196,7 +191,6 @@ body {
 .modal-content {
   background-color: #eee;
 }
-
 
 @media only screen and (max-width: 575px) {
   .dog-logo {

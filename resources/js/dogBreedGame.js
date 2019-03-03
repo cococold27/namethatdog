@@ -91,11 +91,11 @@ function allDogBreeds() {
 function getDogName(randomDog) {
   let dogName = "";
 
-  const startIndex = "/dogs/";
-  const endIndex = ".";
+  const START_INDEX = "/dogs/";
+  const END_INDEX = ".";
 
-  const start = randomDog.indexOf(startIndex) + startIndex.length;
-  const end = randomDog.indexOf(endIndex);
+  const start = randomDog.indexOf(START_INDEX) + START_INDEX.length;
+  const end = randomDog.indexOf(END_INDEX);
 
   const dogDisplay = randomDog.slice(start, end);
   const dogDisplayArr = dogDisplay.split("-");
@@ -107,7 +107,7 @@ function getDogName(randomDog) {
   return dogName.replace("_", "-");
 }
 
-function generatePictures(NUM_OF_PICTURES) {
+function generateDogs(NUM_OF_PICTURES) {
   const dogs = document.querySelectorAll(".picture-container");
   const dogImages = allDogBreeds();
   const randomDog = dogImages[Math.floor(Math.random() * dogImages.length)];
@@ -160,7 +160,7 @@ function dogBreedGame() {
   const dogs = document.querySelectorAll(".picture-container");
   const messageDisplay = document.querySelector("#message");
 
-  let randomDog = generatePictures(NUM_OF_PICTURES);
+  let randomDog = generateDogs(NUM_OF_PICTURES);
 
   let currentLevel = 1;
   let currentLives = 5;
@@ -174,7 +174,6 @@ function dogBreedGame() {
 
   for (let i = 0; i < NUM_OF_PICTURES; i++) {
     // console.log(uniqueDogImages);
-
     let firstClick = true;
 
     dogs[i].addEventListener("click", function() {
@@ -183,12 +182,16 @@ function dogBreedGame() {
       console.log(clickedImage + " " + randomDog);
       console.log(firstClick);
 
-      const displayMessage = document.getElementById("message");
-      displayMessage.parentElement.style.display = "inline";
+      // const displayMessage = document.getElementById("message");
+      // displayMessage.parentElement.style.display = "inline";
       if (clickedImage === randomDog && firstClick) {
         firstClick = false;
 
-        messageDisplay.textContent = "Correct!";
+        document.getElementById("jumbotron-message").style.display = "block";
+        document.getElementById("jumbotron-message").style.backgroundColor = "#28a745";
+        document.getElementById("jumbotron-message").style.borderColor = "#28a745";
+        document.getElementById("message").style.color = "#eee";
+        messageDisplay.innerHTML = "<h4>Correct!<h4>";
         
         currentLevel++;
         document.getElementById("current-level").textContent = currentLevel;
@@ -210,7 +213,7 @@ function dogBreedGame() {
 
         setTimeout(function() { 
           firstClick = true;
-          randomDog = generatePictures(NUM_OF_PICTURES, randomDog);
+          randomDog = generateDogs(NUM_OF_PICTURES, randomDog);
         }, 1000);
 
       } else if (firstClick) {
@@ -218,7 +221,12 @@ function dogBreedGame() {
 
         currentLives--;
 
-        messageDisplay.textContent = "Try again";
+        document.getElementById("jumbotron-message").style.display = "block";
+        document.getElementById("jumbotron-message").style.backgroundColor = "#ffc107";
+        document.getElementById("jumbotron-message").style.borderColor = "#ffc107";
+        document.getElementById("message").style.color = "#141414";
+        messageDisplay.innerHTML = "<h4>Try again<h4>";
+
         this.style.visibility = "hidden";
         this.style.opacity = "0";
         this.style.transition = "visibility 0.7s, opacity 0.7s";
@@ -240,7 +248,7 @@ function dogBreedGame() {
           
           setTimeout(function() {
             firstClick = true;
-            randomDog = generatePictures(NUM_OF_PICTURES, randomDog);
+            randomDog = generateDogs(NUM_OF_PICTURES, randomDog);
           }, 1000);
 
           currentLevel = 1;
@@ -249,13 +257,12 @@ function dogBreedGame() {
 
           document.getElementById("current-level").textContent = currentLevel;
           document.getElementById("current-score").textContent = currentScore;
-          displayMessage.parentElement.style.display = "none";
+          document.getElementById("jumbotron-message").style.display = "none";
         }
         document.getElementById("current-lives").textContent = currentLives;
       } 
     });
   }
-
 }
 
 dogBreedGame();

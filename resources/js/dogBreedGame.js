@@ -211,7 +211,7 @@ function dogBreedGame() {
       // console.log(firstClick);
 
       // if ((clickedImage === randomDog) && firstClick) {
-        if (true) {
+        if (firstClick) {
         firstClick = false;
 
         document.getElementById("jumbotron-message").style.display = "block";

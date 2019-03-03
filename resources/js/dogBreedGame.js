@@ -41,6 +41,15 @@ function allDogBreeds() {
     'url("' + DOG_IMAGES_LOCATION + 'briard.jpg")',
     'url("' + DOG_IMAGES_LOCATION + 'brittany.jpg")',
     'url("' + DOG_IMAGES_LOCATION + 'brussels-griffon.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'canaan.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'cardigan-welsh-corgi.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'cavalier-king-charles-spaniel.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'chihuahua.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'chinese-crested.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'chow-chow.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'clumber-spaniel.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'collie.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'curly-coated-retriever.jpg")',
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
@@ -51,13 +60,26 @@ function allDogBreeds() {
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-
-
-
-
-
-
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    
+    
+    
+    
+    
+    
     'url("' + DOG_IMAGES_LOCATION + 'redbone-coonhound.jpg")',
+    
+    
+    'url("' + DOG_IMAGES_LOCATION + 'shar-pei.jpg")',
+    
+    
+    'url("' + DOG_IMAGES_LOCATION + 'xoloitzcuintli.jpg")',
   ];
 
   return dogImages;
@@ -137,7 +159,7 @@ function dogBreedGame() {
   let randomDog = generatePictures(NUM_OF_PICTURES);
 
   let currentLevel = 1;
-  let currentLives = 3;
+  let currentLives = 5;
   let currentScore = 0;
   let bestScore = 0;
  
@@ -216,7 +238,7 @@ function dogBreedGame() {
 
           currentLevel = 1;
           currentScore = 0;
-          currentLives = 3;
+          currentLives = 5;
 
           document.getElementById("current-level").textContent = currentLevel;
           document.getElementById("current-score").textContent = currentScore;

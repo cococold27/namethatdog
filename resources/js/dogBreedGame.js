@@ -194,7 +194,7 @@ function dogBreedGame() {
     // console.log(uniqueDogImages);
     let firstClick = true;
 
-    $(dogs[i]).on("click touch", function () {
+    $(dogs[i]).on("click touchstart", function () {
     // dogs[i].addEventListener("click", function() {
       // alert("clicked an image");
       let clickedImage = this.style.backgroundImage;

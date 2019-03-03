@@ -25,6 +25,26 @@ function allDogBreeds() {
     'url("' + DOG_IMAGES_LOCATION + 'berger-picard.jpg")',
     'url("' + DOG_IMAGES_LOCATION + 'bichon-frise.jpg")',
     'url("' + DOG_IMAGES_LOCATION + 'black-and-tan-coonhound.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'black-mouth-cur.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'black-russian-terrier.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'bloodhound.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'blue-lacy.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'bluetick-coonhound.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'boerboel.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'border-terrier.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'borzoi.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'boston-terrier.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'bouvier-des-flandres.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'boxer.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'boykin-spaniel.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'bracco-italiano.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'briard.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'brittany.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'brussels-griffon.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
+    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
     // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
@@ -115,10 +135,6 @@ function dogBreedGame() {
   const messageDisplay = document.querySelector("#message");
 
   let randomDog = generatePictures(NUM_OF_PICTURES);
-
-
-
-
 
   let currentLevel = 1;
   let currentLives = 3;

@@ -197,13 +197,9 @@ function dogBreedGame() {
 
       let clickedImage = this.style.backgroundImage;
 
-      console.log(getDogName(clickedImage).replace(/ /gi, ""));
-      console.log(getDogName(randomDog).replace(/ /gi, ""));
+      // console.log(clickedImage, randomDog);
 
-      var clickedName = getDogName(clickedImage).replace(/ /gi, "");
-      var randomName = getDogName(randomDog).replace(/ /gi, "");
-
-      if ((clickedName == randomName) && firstClick) {
+      if ((clickedImage === randomDog) && firstClick) {
         firstClick = false;
 
         document.getElementById("jumbotron-message").style.display = "block";
@@ -235,7 +231,7 @@ function dogBreedGame() {
           randomDog = generateDogs(NUM_OF_PICTURES, randomDog);
         }, 1000);
 
-      } else if (firstClick) {
+      } else if ((clickedImage !== randomDog) && firstClick) {
         firstClick = false;
 
         currentLives--;

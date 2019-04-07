@@ -211,7 +211,7 @@ body {
   .nav-item {
     background-color: #eee;
     z-index: 9999;
-    width: 50%;
+    width: 70%;
   }
   
   .nav-item:first-child {

@@ -207,6 +207,24 @@ body {
     margin: auto;
     max-width: 350px;
   }
+
+  .nav-item {
+    background-color: #eee;
+    z-index: 9999;
+    width: 50%;
+  }
+  
+  .nav-item:first-child {
+    border-radius: 0.25rem 0.25rem 0 0;
+  }
+
+  .nav-item:last-child {
+    border-radius: 0 0 0.25rem 0.25rem;
+  }
+
+  #top-scores {
+    padding-left: 0.5rem;
+  }
 }
 
 @media only screen and (max-width: 767px) {

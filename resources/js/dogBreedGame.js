@@ -77,30 +77,46 @@ function allDogBreeds() {
     'url("' + DOG_IMAGES_LOCATION + 'great-dane.jpg")',
     'url("' + DOG_IMAGES_LOCATION + 'great-pyrenees.jpg")',
     'url("' + DOG_IMAGES_LOCATION + 'greyhound.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    // 'url("' + DOG_IMAGES_LOCATION + '.jpg")',
-    
-    
-    
-    
-    
-    
+    'url("' + DOG_IMAGES_LOCATION + 'hamiltonstovare.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'hanoverian-scenthound.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'harrier.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'havanese.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'hokkaido.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'horgi.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'huskita.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'ibizan-hound.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'icelandic-sheepdog.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'irish-red-and-white-setter.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'irish-terrier.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'irish-water-spaniel.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'italian-greyhound.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'jack-chi.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'japanese-chin.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'karelian-bear.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'keeshond.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'komondor.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'kooikerhondje.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'kuvasz.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'kyi_leo.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'lancashire-heeler.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'lowchen.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'maltese.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'mudi.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'newfoundland.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'papillon.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'pekingese.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'pomeranian.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'pug.jpg")',
     'url("' + DOG_IMAGES_LOCATION + 'redbone-coonhound.jpg")',
-    
-    
+    'url("' + DOG_IMAGES_LOCATION + 'rottweiler.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'saluki.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'samoyed.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'schipperke.jpg")',
     'url("' + DOG_IMAGES_LOCATION + 'shar-pei.jpg")',
-    
-    
+    'url("' + DOG_IMAGES_LOCATION + 'shiba-inu.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'shih-tzu.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'siberian-husky.jpg")',
+    'url("' + DOG_IMAGES_LOCATION + 'tibetan-mastiff.jpg")',
     'url("' + DOG_IMAGES_LOCATION + 'xoloitzcuintli.jpg")',
   ];
 

@@ -12,6 +12,10 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 #container {
   margin: 0 auto;
   max-width: 900px;
@@ -118,6 +122,33 @@ body {
   background-color: #eee;
 }
 
+@media only screen and (max-width: 767px) {
+  .picture-container {
+    height: 175px;
+  }
+
+  .navbar-text,
+  #current-level, 
+  #current-lives, 
+  #current-score, 
+  #best-score {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  #dog-breed {
+    font-size: 24px;
+  }
+
+  hr.my-4 {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+}
+
 @media only screen and (max-width: 575px) {
   .dog-logo {
     width: 50px;
@@ -126,12 +157,6 @@ body {
 
   .container-mobile {
     width: 90%;
-  }
-
-  .picture-container,
-  .jumbotron {
-    margin: auto;
-    max-width: 350px;
   }
 
   .nav-item {
@@ -153,10 +178,24 @@ body {
   }
 }
 
-@media only screen and (max-width: 767px) {
-  .picture-container,
-  .jumbotron {
-    margin: auto;
-    max-width: 350px;
+@media only screen and (max-width: 480px) {
+  .picture-container {
+    height: 125px;
+  }
+
+  #pictures-row>.col-6:nth-child(odd) {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #pictures-row>.col-6:nth-child(even) {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .picture-container {
+    height: 100px;
   }
 }

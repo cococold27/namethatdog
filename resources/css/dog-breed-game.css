@@ -1,4 +1,4 @@
-/* Grey color: #141414 */
+/* Black color: #141414 */
 /* White color: #eee */
 
 * {
@@ -122,6 +122,20 @@ h1 {
   background-color: #eee;
 }
 
+.modal-footer .btn-primary {
+  background-color: #141414;
+  border-color: #141414;
+}
+
+.modal-footer .btn-secondary {
+  background-color: #fff;
+  border-color: #fff;
+  color: #666666;
+}
+
+/* ----------------------- */
+/* Mobile Friendly         */
+/* ----------------------- */
 @media only screen and (max-width: 767px) {
   .picture-container {
     height: 175px;

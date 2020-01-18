@@ -156,14 +156,44 @@ h1.modal-title {
 }
 
 .modal-footer .btn-primary {
-  background-color: #141414;
-  border-color: #141414;
+  background-color: #141414 !important;
+  border-color: #141414 !important;
+}
+
+.modal-footer .btn-primary:active {
+  background-color: #666666 !important;
+  border-color: #666666 !important;
 }
 
 .modal-footer .btn-secondary {
   background-color: #fff;
   border-color: #fff;
   color: #666666;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+/* .appear {
+  opacity: 1;
+}  */
+
+/* @keyframes example {
+  from { 
+    opacity: 1;
+  }
+  
+  to { 
+    opacity: 0;
+  }
+} */
+
+#jumbotron-message {
+  animation-name: example;
+  animation-duration: 4s;
+  /* animation-fill-mode: forwards; */
 }
 
 /* ----------------------- */

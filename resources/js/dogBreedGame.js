@@ -289,6 +289,8 @@ function dogBreedGame() {
         if (currentLives <= 0) {
           $("#modalCenter").modal('show');
 
+          document.getElementById("display-score").textContent = currentScore;
+
           for (let j = 0; j < dogs.length; j++) {
             dogs[j].style.visibility = "hidden";
             dogs[j].style.opacity = "0";

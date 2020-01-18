@@ -189,8 +189,21 @@ function generateDogs(NUM_OF_PICTURES) {
   return randomDog;
 }
 
+function displayLives(totalLives, currentLives) {
+  document.getElementById("current-lives").innerHTML = "";
+
+  for (let i = 0; i < totalLives; i++) {
+    if (i < currentLives) {
+      document.getElementById("current-lives").innerHTML += '<i class="fas fa-heart"></i>';
+    } else {
+      document.getElementById("current-lives").innerHTML += '<i class="far fa-heart"></i>';
+    }
+  }
+}
+
 function dogBreedGame() {
   const NUM_OF_PICTURES = 6;
+  const TOTAL_LIVES = 5;
   const WEBSITE_LINK = "https://cococold27.github.io/namethatdog/";
 
   const dogs = document.querySelectorAll(".picture-container");
@@ -203,7 +216,8 @@ function dogBreedGame() {
   let currentScore = 0;
   let bestScore = 0;
  
-  document.getElementById("current-lives").textContent = currentLives;
+  displayLives(TOTAL_LIVES, currentLives);
+  
   document.getElementById("current-score").textContent = currentScore;
   document.getElementById("best-score").textContent = bestScore;
 
@@ -262,7 +276,6 @@ function dogBreedGame() {
         document.getElementById("jumbotron-message").style.borderColor = "#ffc107";
         document.getElementById("message").style.color = "#141414";
         messageDisplay.innerHTML = "<h4>Try again<h4>";
-        // messageDisplay.innerHTML = clickedImage + " " + randomDog;
 
         this.style.visibility = "hidden";
         this.style.opacity = "0";
@@ -296,7 +309,8 @@ function dogBreedGame() {
           document.getElementById("current-score").textContent = currentScore;
           document.getElementById("jumbotron-message").style.display = "none";
         }
-        document.getElementById("current-lives").textContent = currentLives;
+
+        displayLives(TOTAL_LIVES, currentLives);
       } 
     });
   }

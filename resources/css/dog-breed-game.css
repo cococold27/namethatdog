@@ -4,7 +4,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 16px;
 }
 
 body {
@@ -48,8 +47,10 @@ h1 {
   background-color: #f8f8f8;
 }
 
-.level {
-  background-color: #d1e2d3;
+.navbar-text.level {
+  background-color: #fafafa;
+  color: #141414 !important;
+  font-weight: 700;
   border-radius: 5px;
 }
 
@@ -58,6 +59,23 @@ h1 {
 #current-score,
 #best-score {
   font-size: 1.4rem;
+}
+
+#current-lives {
+  color: #d33838;
+}
+
+#current-lives>.fa-heart {
+  padding-right: 2px;
+  padding-left: 2px;
+}
+
+#current-lives>.fa-heart:first-child {
+  padding-left: 0;
+}
+
+#current-lives>.fa-heart:last-child {
+  padding-right: 0;
 }
 
 .navbar-text {
@@ -98,7 +116,6 @@ h1 {
 
 .picture-container:hover {
   transform: scale(1.05);
-  /*opacity: 0.95;*/
   filter: brightness(0.85);
 }
 
@@ -115,7 +132,7 @@ h1 {
 }
 
 #modalCenter {
-  background-color: rgb(0, 0, 0, 0.93);
+  background-color: rgb(0, 0, 0, 0.9);
 }
 
 .modal-content {
@@ -149,6 +166,22 @@ h1 {
     font-size: 14px;
   }
 
+  #current-level,
+  #current-lives,
+  #current-score,
+  #best-score {
+    display: block;
+  }
+
+  .navbar-text {
+    text-align: end;
+  }
+
+  .navbar-text.level {
+    text-align: center;
+    border-radius: 50%;
+  }
+
   h1 {
     font-size: 16px;
   }
@@ -167,32 +200,40 @@ h1 {
   .dog-logo {
     width: 50px;
     height: 50px;
+    margin-left: 0;
   }
 
   .container-mobile {
     width: 90%;
   }
 
-  .nav-item {
-    background-color: #eee;
-    z-index: 9999;
-    width: 70%;
-  }
-  
-  .nav-item:first-child {
-    border-radius: 0.25rem 0.25rem 0 0;
+  .navbar-brand {
+    margin-right: 0;
   }
 
-  .nav-item:last-child {
-    border-radius: 0 0 0.25rem 0.25rem;
+  .navbar-text {
+    margin-right: 0.5rem;
   }
 
-  #top-scores {
-    padding-left: 0.5rem;
+  #current-lives>.fa-heart {
+    padding-right: 0.5px;
+    padding-left: 0.5px;
   }
 }
 
 @media only screen and (max-width: 480px) {
+  .navbar-text {
+    margin-right: 0;
+  }
+
+  .navbar-text,
+  #current-level,  
+  #current-lives, 
+  #current-score, 
+  #best-score {
+    font-size: 10px;
+  }
+
   .picture-container {
     height: 125px;
   }
@@ -206,9 +247,7 @@ h1 {
     display: flex;
     justify-content: flex-end;
   }
-}
 
-@media only screen and (max-width: 400px) {
   .picture-container {
     height: 100px;
   }

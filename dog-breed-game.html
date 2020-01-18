@@ -22,10 +22,9 @@
   <link rel="shortcut icon" type="image/png" href="./resources/img/dog-logo.png">
 </head>
 <body>
-  <nav class="navbar navbar-expand-sm navbar-light bg-custom mb-4">
+  <nav class="navbar navbar-expand navbar-light bg-custom mb-4">
     <a class="navbar-brand" href="./index.html">
       <img src="./resources/img/dog-logo.png" width="70" height="70" alt="Website Logo" class="dog-logo">
-      <!--<i class="fas fa-dog fa-4x"></i>-->
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -33,13 +32,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <div class="navbar-text"><i class="fas fa-star"></i> Best Score: <span id="best-score"></span></div>
+          <div class="navbar-text"><i class="fas fa-trophy"></i> Best Score: <span id="best-score"></span></div>
         </li>
         <li class="nav-item active">
-          <div class="navbar-text">Current Score: <span id="current-score"></span></div>
+          <div class="navbar-text">Score: <span id="current-score"></span></div>
         </li>
         <li class="nav-item active">
-          <div class="navbar-text" id="lives">Lives: <span id="current-lives"></span></div>
+          <div class="navbar-text" id="lives"><span id="current-lives"></span></div>
         </li>
         <li class="nav-item active">
           <div class="navbar-text level">Stage <span id="current-level">1</span></div>
@@ -85,7 +84,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container container-mobile">
     <div class="jumbotron" id="jumbotron-message" style="display: none">
       <h1>
         <span id="message">&nbsp;</span>
